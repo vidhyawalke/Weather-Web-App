@@ -2,6 +2,37 @@
 ---
 @import "{{ site.theme }}";
 
+/* ── Override Architect two-column layout → single stacked column ── */
+.wrapper {
+  width: 90%;
+  max-width: 860px;
+}
+
+header {
+  width: 100% !important;
+  float: none !important;
+  position: relative !important;
+  padding: 20px 20px 16px !important;
+  border-bottom: 1px solid #2879d0;
+  margin-bottom: 24px;
+}
+
+header h1 { font-size: 2rem; }
+
+section {
+  width: 100% !important;
+  float: none !important;
+  border: none !important;
+  padding-left: 0 !important;
+}
+
+footer {
+  width: 100% !important;
+  float: none !important;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+
 /* ── Weather App custom styles ── */
 
 .search-bar {
