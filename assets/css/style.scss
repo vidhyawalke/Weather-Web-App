@@ -1,4 +1,8 @@
-/* Weather app styles layered on top of Architect theme */
+---
+---
+@import "{{ site.theme }}";
+
+/* ── Weather App custom styles ── */
 
 .search-bar {
   display: flex;
