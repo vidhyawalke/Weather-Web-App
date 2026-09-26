@@ -1,9 +1,9 @@
-/* Override / extend Architect theme for the weather app */
+/* Weather app styles layered on top of Architect theme */
 
 .search-bar {
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .loading {
-  padding: 16px 0;
+  padding: 12px 0;
   color: #2879d0;
 }
 
@@ -53,14 +53,9 @@
   display: none;
 }
 
-.weather-card {
-  margin-top: 8px;
-}
-
 .current-weather h2 {
   margin-top: 0;
   color: #2879d0;
-  border-bottom: none;
 }
 
 .current-weather p {
