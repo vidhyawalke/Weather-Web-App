@@ -5,56 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
   <meta name="description" content="Simple weather app showing current weather, hourly forecast for your location." />
+  <link rel="stylesheet" href="https://pages-themes.github.io/architect/assets/css/style.css?v=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Weather App</h1>
-
-    <div class="search-bar">
-      <input
-        type="text"
-        id="locationInput"
-        placeholder="Enter a city or location..."
-        aria-label="Location input"
-      />
-      <button id="searchBtn" aria-label="Search weather">Search</button>
-      <button id="refreshBtn" aria-label="Refresh weather">&#x21bb; Refresh</button>
+  <header>
+    <div class="inner">
+      <h1>Weather App</h1>
+      <h2>Current weather and 24-hour forecast for any location.</h2>
+      <a href="https://github.com/vidhyawalke/Weather-Web-App" class="button" id="viewOnGithubBtn">
+        <small>View project on</small>
+        GitHub
+      </a>
     </div>
+  </header>
 
-    <div id="error" class="error hidden"></div>
-    <div id="loading" class="loading hidden">Loading...</div>
+  <div id="content-wrapper">
+    <div class="inner clearfix">
+      <section id="main-content">
 
-    <div id="weatherCard" class="weather-card hidden">
-      <div class="current-weather">
-        <h2 id="locationName"></h2>
-        <p id="dateTime"></p>
-        <div class="main-info">
-          <span id="tempDisplay" class="temp"></span>
-          <span id="conditionDisplay" class="condition"></span>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Enter a city or location..."
+            aria-label="Location input"
+          />
+          <button id="searchBtn" aria-label="Search weather">Search</button>
+          <button id="refreshBtn" aria-label="Refresh weather">&#x21bb; Refresh</button>
         </div>
-        <div class="details">
-          <div class="detail-item">
-            <span class="label">Wind</span>
-            <span id="windSpeed"></span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Rain Chance</span>
-            <span id="rainChance"></span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Humidity</span>
-            <span id="humidity"></span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Feels Like</span>
-            <span id="feelsLike"></span>
-          </div>
-        </div>
-      </div>
 
-      <h3 class="hourly-title">24-Hour Forecast</h3>
-      <div id="hourlyForecast" class="hourly-scroll"></div>
+        <div id="error" class="error hidden"></div>
+        <div id="loading" class="loading hidden">Loading...</div>
+
+        <div id="weatherCard" class="weather-card hidden">
+          <div class="current-weather">
+            <h2 id="locationName"></h2>
+            <p id="dateTime"></p>
+            <div class="main-info">
+              <span id="tempDisplay" class="temp"></span>
+              <span id="conditionDisplay" class="condition"></span>
+            </div>
+            <div class="details">
+              <div class="detail-item">
+                <span class="label">Wind</span>
+                <span id="windSpeed"></span>
+              </div>
+              <div class="detail-item">
+                <span class="label">Rain Chance</span>
+                <span id="rainChance"></span>
+              </div>
+              <div class="detail-item">
+                <span class="label">Humidity</span>
+                <span id="humidity"></span>
+              </div>
+              <div class="detail-item">
+                <span class="label">Feels Like</span>
+                <span id="feelsLike"></span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="hourly-title">24-Hour Forecast</h3>
+          <div id="hourlyForecast" class="hourly-scroll"></div>
+        </div>
+
+      </section>
+
+      <aside id="sidebar">
+        <p><strong>Weather App</strong> displays real-time weather data powered by the <a href="https://www.visualcrossing.com/weather-api" target="_blank" rel="noopener">Visual Crossing API</a>.</p>
+        <p>Enter any city or allow location access for local weather.</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Current temperature</li>
+          <li>Wind speed</li>
+          <li>Rain likelihood</li>
+          <li>Humidity &amp; feels like</li>
+          <li>24-hour forecast</li>
+        </ul>
+      </aside>
     </div>
   </div>
 
